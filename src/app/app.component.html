@@ -1,0 +1,47 @@
+<div class="row mt-3 mb-3">
+  <div class="col-md-9 ml-5">
+    <input type="text" id="search" name="search" placeholder="Seach Repositories . . ." >
+  </div>
+  <div class="col-md-2 mr-3">
+    <button type="button" name="btnsearch"  id="btnsearch">Search</button>
+  </div>
+</div>
+
+<div class="mt-3 mb-3 ml-4 mr-4">
+  <div class="row apires" *ngFor = "let item of Mastertableslice">
+    <div class="col-md-2">
+      <img src={{item.owner.avatar_url}} alt="">
+    </div>
+    <div class="col-md-8 mt-2">
+      <table>
+        <tr>
+            <th>Repository Name:</th>
+            <td>{{item.name}}</td>
+        </tr>
+        <tr>
+            <th>Owner:</th>
+            <td>{{item.owner.login}}</td>
+        </tr>
+        <tr>
+            <th>Forks Count:</th>
+            <td>{{item.forks_count}}</td>
+        </tr>
+        <tr>
+          <th>Star Count:</th>
+          <td>{{item.stargazers_count}}</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-4"><button (click)="prev()">PREV</button></div>
+        <div class="col-md-4"><p>{{i}} Pages</p></div>
+        <div class="col-md-4"><button (click)="next()">NEXT</button></div>
+      </div>
+    </div>
+  </div>
+</div>

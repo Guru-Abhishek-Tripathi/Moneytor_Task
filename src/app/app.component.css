@@ -1,0 +1,12 @@
+input,button{
+    width: 100%;
+}
+.apires{
+    margin: 10px;
+    background-color: blanchedalmond;
+}
+img{
+    width: 120px;
+    border-radius: 80px;
+    margin: 2px;
+}
